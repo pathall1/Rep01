@@ -1,13 +1,13 @@
 declare @sql varchar(8000)
-select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c –t| -T -S' + @@servername
+select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c ï¿½t| -T -S' + @@servername
 exec master..xp_cmdshell @sql
 exec master..xp_cmdshell @sql22
 
-select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c –t^ -T -S' + @@servername
+select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c ï¿½t^ -T -S' + @@servername
 exec master..xp_cmdshell @sql
 
-declare @sql varchar(8000)
-select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c –t|^ -T -S' + @@servername
+declare @sql varchar(6000)
+select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c ï¿½t|^ -T -S' + @@servername
 exec master..xp_cmdshell @sql
 
 select cr = ascii('
