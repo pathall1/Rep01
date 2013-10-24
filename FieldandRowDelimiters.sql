@@ -1,8 +1,8 @@
 declare @sql varchar(8000)
 select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c –t| -T -S' + @@servername
 exec master..xp_cmdshell @sql
+exec master..xp_cmdshell @sql22
 
-declare @sql varchar(8000)
 select @sql = 'bcp master..sysobjects out c:\bcp\sysobjects.txt -c –t^ -T -S' + @@servername
 exec master..xp_cmdshell @sql
 
